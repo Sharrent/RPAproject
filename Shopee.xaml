@@ -1,0 +1,174 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Shopee" this:Shopee.inProductName="Gluten Free Cookies" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="outPrice" Type="OutArgument(x:String)" />
+    <x:Property Name="outRating" Type="OutArgument(x:String)" />
+    <x:Property Name="outName" Type="OutArgument(x:String)" />
+    <x:Property Name="outImage" Type="OutArgument(x:String)" />
+    <x:Property Name="inProductName" Type="InArgument(x:String)" />
+    <x:Property Name="outSoldCount" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>541.333333333333,1854.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Shopee_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Shopee" sap:VirtualizedContainerService.HintSize="476,1790" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="434,135.333333333333" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="iexplore" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: Shopee Malaysia | Free Shipping Across Malaysia" sap:VirtualizedContainerService.HintSize="434,1522.66666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="77f3d3cd-000d-424b-8df5-ffd3ca208281" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1304.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,220" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="77f3d3cd-000d-424b-8df5-ffd3ca208281" Text="[inProductName]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://shopee.com.my/" DesignTimeRectangle="334, 273, 372, 51" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='' class='shopee-searchbar-input__input' aaname='' /&gt;" Guid="844853d8-ad39-4e81-94c2-9ac315d14d78" ImageBase64="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" InformativeScreenshot="36506a0e1226bee8687cf3df72032bd2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Shopee Malaysia | Free Shipping Across Malaysia' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="77f3d3cd-000d-424b-8df5-ffd3ca208281" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://shopee.com.my/" DesignTimeRectangle="721, 273, 90, 51" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='btn btn-solid-primary btn--s btn--inline shopee-searchbar__search-button' aaname='' /&gt;" Guid="ec19b656-f80e-42d1-81d0-9ed8a9a5f62e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAA3CAYAAACFKf38AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKhSURBVHhe7ZyxbhNBEIZ5J1oi8QKUFCmCqChoEb1piIRERwqgoYGCkkDt1BHpoKCCBopItiVwKHx3O+y/d2vseHyy0YWZs/6RPl3k3bVO3+7NjTfSXhOGSVC8UVC8UczFhxCkfHko5Z09KW5fJx0Cp3ALxzmSeHxQvHisDiIdEh1n+Ul8WZZSHNzQO5PuiI7hei5+NpvpHUnnwDXFG0DxRlC8ERRvBMUbQfFGULwRFG8ExRtB8UZQvBG9El8dDaQavpNw/j3dNCJ8+ijV+9dS3r+ljvFKL8SXD/clfP2SbrQtMCnF3Zvqd3jDvXiscpn+TDeJCCfH6bNycC9RvXoq4dvfScEE9UG+a/FY6Vk65Lalk/LJA5GLX3XfHsh3LT6vZFw3EZkmqpFfvX2u9vGCW/EpxTSxzYsTwlPEJ8XzqncrHrkcgavW3kZe9Ug/WrsH3IqX8x/pxrDytfY2wuezeqzjdONXfBOoXLT2NnK6CacnarsHdlP8hzdp7L+kqf+FW/G5okGdrrW3MR/LVLM981WLmlxpXwcqoBwoL7U+HnArfkngFtUJ8nqK+HLW2r3gVjzIJSVq8k1Wbxg2/WN4LiWBa/H4AZTzNeSvy9l4OsLpsO6HKGau0wzwLR4sykfECUhbwXESsB28smtZFPV1w6fECv/iQZSfavPmF6kaMacjvSzu13iW3w/xmTgBkItJwEs0bRHHvy/L7YP8fonfAu/yd1Y8WJSPfxdqfazYafEA8rFptq4ismLnxXuF4o2geCMo3giKN4LijaB4IyjeCIo3guKNoHgjKN6IVfE8vePqiY5XxP8+eqR3Jp0Bx0vicYbKdDqVi2cDrvyrIDqFWzheOq8GpwZhJtAwmUxkPB7LaDQiHQCXcAq3cFyf0CTyB9eVqo/c1tlNAAAAAElFTkSuQmCC" InformativeScreenshot="599b13cbf5bb6b62e06859601c2bdd7f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Shopee Malaysia | Free Shipping Across Malaysia' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NGetText DisplayName="Get Text 'RED VELVET'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="77f3d3cd-000d-424b-8df5-ffd3ca208281" Version="V1">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://shopee.com.my/search?keyword=cookies" DesignTimeRectangle="394, 595, 255, 42" ElementType="Text" FriendlyName="'RED VELVET'" FullSelectorArgument="&lt;webctrl aaname='RED VELVET COOKIES WITH MELTED WHITE CHOCOLATE' parentid='main' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main' tag='DIV' type='' class='ie3A+n bM+7UW Cve6sh' /&gt;" Guid="89ea9414-fe01-487f-85d5-db5bc450bb8e" InformativeScreenshot="41919a9d8ead1618aa447318e521b086.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='cookies - Prices and Promotions - Sept 2022 | Shopee Malaysia' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[outName]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '20.00'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="77f3d3cd-000d-424b-8df5-ffd3ca208281" Version="V1">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://shopee.com.my/search?keyword=cookies" DesignTimeRectangle="394, 685, 27, 22" ElementType="Text" FriendlyName="'29.50'" FullSelectorArgument="&lt;webctrl aaname='29.50' parentid='main' tag='SPAN' class='ZEgDH9' parentclass='vioxXd rVLWG6' /&gt;" FuzzyAccuracy="0.71" FuzzySelectorArgument="&lt;webctrl parentid='main' tag='SPAN' class='ZEgDH9' parentclass='vioxXd rVLWG6' type='' /&gt;" Guid="b7296a4f-6adb-44d5-b0f7-59fecd9de44e" ImageBase64="" InformativeScreenshot="10266ace2afd6d12691fb87056f1694f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='cookies - Prices and Promotions - Sept 2022 | Shopee Malaysia' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="421, 679, 60, 29" ElementType="Text" FriendlyName="'20.00'" FullSelectorArgument="&lt;webctrl aaname='20.00' parentid='main' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='20.00' parentid='main' tag='SPAN' type='' class='ZEgDH9' check:innerText='20.00' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAhCAYAAABpwa0hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAOeSURBVGhD7VjPSxtBFO4/5M2TN2+9iAfJKSJIwIOXEhACgtSLvRg8iAhKIR4EBREEiZdAoSKFQEHpRUEKQoMggeyvZJNowtc3u283M5PNmkChkM0Hw8DbmTdvvvdm5r39gIRjQgD3icWEAO4TiwkB3CcWEwK4V9B+LMJaT6G2MIXaHLWFWRjreTiPNro8pg8dG24pDyMz688RbSkD87iMVofHjICudQ9nLwsjPc36ZmBkc7DKVcSpa5WPYGbnezakUzD2inAtHqBBI6CFRmFRnbxCLTRiGsZlpZ+ETgX2xkw4ppYR8yQjMrto1HnsEOg+F2GmeK4gX9iw1NNvHNzhlcf2QLYfkNOCNZd820MnprKwn3moBIWA15stf/DCKmzN282LVVa+CPsPCxmtbzn/2/IWnBcWEoQX7ZxPnlG4Hxw9Cmw4mzxn51qJnvbjCQxvQ/OwHljI6D4cwoiyvVOFs8PO2CwRTSokAqqw14TyKZglm2UyyLAN/7tx+ptlAsG8aZg/dPVk2BMZ7RmWR2OYo/ByzuO3UG+yTIJ7yhG6f6cQ2thn0s4rLJFQv4bpEUfkSA4S+NAT3MESiiMGBWhechTQ4iGsEkxvHnk/wmDgHlZafE/BfmJRDNpBNG1f441lCsjT3veVE7gsen8NEVXiOzn3RnWSRAAdActGm9rbAE+5hY+eEuOyyhJC4GHFIBkUITl/ceuWRTFwT/1zrEaZhGrRX2+OIopFaJKHPdkgJ1CEHHCEyLYTFAJi0QlY1u6A27ynuLZ2jgFrU3j6BOiLR+H9sRGRGhwbmRQNkdFLGJoAt8AXCSlQQjMJBLzSJr0FlmkB/TkbdwLCzYvnJeIdHWsCus+kOHh3b/ufOA/jSoCy+Z8xKXDwCqQP/+krUKPEKRKxr0AOzoCUd6RXoGuVYS0LhTMwryJSXxnjlAd4qFOIeZsfkPf3QcoENeUC3cejMEJGzQSdiPrBPeYI+aqm1mEmSPlDn80iExRz5rJwaixjqASIosbL3WnzF5XYqktGrxb4DEfKEZRaQDeMcvT62S7s7xWtsJFqgS9FNCNrAcpFNE/3aoFFWL8G1AIUVXoRpRAQnBOv9BQVWEwzS/JZslHfDqo/0qFXg58oXDU2W1d8KcmXWYAaecyLQmpR1eBZhJcJ7plUyerVIBVqdc37AioBfAMP0/pu6RH/B4Qlb4aORsTd8Z/+ByQPEwK4TywmBHCfWEwI4D6xSDgBwF8ZVPYLSoF8tQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[outPrice]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="77f3d3cd-000d-424b-8df5-ffd3ca208281" Version="V1">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://shopee.com.my/search?keyword=cookies" DesignTimeRectangle="119, 553, 255, 30" FriendlyName="'3 sold'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='4' parentid='main' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='ZnrnMl' parentid='main' tag='DIV' aaname='' /&gt;" Guid="c2589be8-c8e5-4fd9-a806-b9e20e709a8d" InformativeScreenshot="c5242d03ea5ead7d64cbfe5e78ffea28.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='cookies - Prices and Promotions - Sept 2022 | Shopee Malaysia' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="119, 561, 83, 15" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='main' tag='DIV' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl type='' class='shopee-rating-stars__stars' parentid='main' tag='DIV' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAATCAYAAADlAZEWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAE2SURBVFhH7ZZBCsIwEEW9mCfRrV7CA3gAL6B7L+AFdCe0C0EQFFy4cOPCWgpCbIZMsO3EpA5ZJOTBoJlmPp9fTTsQCW+kcD2SwvWIU7hlPlHf/oerEaIHa7jFdS3Efihet43q9IerEaoHa7hwt2rRMp+qTn+4GqF6+Blued+CIBase8LVCNmDDvddPeqhHdTztICqsnFDVK5lv7is9F45h3A1YvGANMNVP33Xkvu/RbkasXhAOsdCcZiRAu2CfQa4GrF4IM9cfDKaCq5b4GrE4MH4QDP9NaDvCFcjdA/GcClBXa5Qs1guUHNYrlCzWC5Qc1gWyHA7rx6tu+fyKsLViMEDfeaelzBcZSMtID/lWvbhugWuRgwe6HDrJ6BpUPaL41ytzHA1YvBgPnMTbFK4HknhekOID/RgRYWMARtcAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[outRating]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '3 sold'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="77f3d3cd-000d-424b-8df5-ffd3ca208281" Version="V1">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://shopee.com.my/search?keyword=cookies" DesignTimeRectangle="208, 558, 49, 21" ElementType="Text" FriendlyName="'3 sold'" FullSelectorArgument="&lt;webctrl aaname='3 sold' parentid='main' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main' tag='DIV' type='' class='r6HknA uEPGHT' /&gt;" Guid="3d62bd9b-fd0e-4d82-b69f-048ff3267129" InformativeScreenshot="a93486616e15ed042607f27f745d0b60.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='cookies - Prices and Promotions - Sept 2022 | Shopee Malaysia' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[outSoldCount]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, 0, 978, 1089" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAzxJREFUWEe9Vl2ITVEUHkKJ4sEDSSkepM4+d5wGk2JKojj73DHdQn6iKJOHeRAvyg0PiFBeRKE8ECYpefHkiadJPCj5e0HUOefOLyaOb+1Z19n33jXXmZk7vvrqtNa397f22j/3No0HSaEwI9S5zXGgDhPpm2KcnlxE2t0X+epb6DuJTYpRjmWTg0irc2w2DN4Du5j0PWxy0LC8sShptWnEwPkCruXwX1CMcqQhLYcbg6TQOjPynbfg75KvVnO4BpQjDbrwjsZweOKItbOf23uTQ6MCmhukpTEcmjjQ2m6aNPTdLRwaFXQjeKu6OTRxhFq9okkHtnoLODQqSGOKxRgOZYMx0SqWSPvKk4r5GlIHaIyUG2FtcQgOGpP/QjXAtilwj7/K4saTrivbpsDpfS+J6xFt/o7Jfkm5esSYN2ybAm15KYlrqJ0+FFuM896SpFicmhTbptF3qN1DiPeIY6pIOrZNgTPwTBJXUg3EeccjY7x22/D2X4bxGUy4Jym0zU6SZAq+H8hjU0LzlG1T4Aw8kcQ2MbBotIIJtiPEHJeoyOqcwEfG1EaWykuBWtUXNC+XcmOidu6wbQocjFui2GKvzq0ZLLgLy7984yUWe41tU6CqK5LYJu05aemdpxsgabIQBVwwpjbQgfOS2Ca9blGgdht9PrcYB/csCv8kaesRCzlpTG2ggBOSWKa6TbeBxtGNoB+pbLdohOjgEWNqg4KSuB7Ryh6chy50Yy4VEvvOUcR+StoKanWQbVOEgeoUxZmo+sv/B1HAcVljUbs7jakN2ltRPAbGOrfB/GP2naHqnE10LM+2KeK86pDEYyFWf5HmwvfH6pxNeK03pjZKgbtREldQq8f13oAocPcmB7zptCVSvsxS3l3JtinokZHEZcL4udF1eMvw/bDqHRgKA+c0HcQsW0mvqTG1gX3JSWKbML7au92bR3raa1pJb3tza1jw5lAMRez41+qJg0HLItJXoKRXLJXE1cR78QN7fZeuEh26qL15Ha0asfuSXiJdW7ZN0V9omS+JJ4P0H4JtU2S5Pg3iZ7asBU7xdWFAQxn76hTb1SLZpWbRXcb+vsaB+9BQaucFeKyy/U1NfwDIiGWwXJXQnwAAAABJRU5ErkJggg==" InformativeScreenshot="627deed3e9f5c712dd46f9cf0de3464c.png" Selector="&lt;html app='msedge.exe' title='Shopee Malaysia | Free Shipping Across Malaysia' /&gt;" Url="https://shopee.com.my/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
