@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>541.333333333333,1854.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1150,1854.66666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Shopee_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -131,7 +131,7 @@
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://shopee.com.my/search?keyword=cookies" DesignTimeRectangle="394, 685, 27, 22" ElementType="Text" FriendlyName="'29.50'" FullSelectorArgument="&lt;webctrl aaname='29.50' parentid='main' tag='SPAN' class='ZEgDH9' parentclass='vioxXd rVLWG6' /&gt;" FuzzyAccuracy="0.71" FuzzySelectorArgument="&lt;webctrl parentid='main' tag='SPAN' class='ZEgDH9' parentclass='vioxXd rVLWG6' type='' /&gt;" Guid="b7296a4f-6adb-44d5-b0f7-59fecd9de44e" ImageBase64="" InformativeScreenshot="10266ace2afd6d12691fb87056f1694f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='cookies - Prices and Promotions - Sept 2022 | Shopee Malaysia' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="421, 679, 60, 29" ElementType="Text" FriendlyName="'20.00'" FullSelectorArgument="&lt;webctrl aaname='20.00' parentid='main' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='20.00' parentid='main' tag='SPAN' type='' class='ZEgDH9' check:innerText='20.00' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAhCAYAAABpwa0hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAOeSURBVGhD7VjPSxtBFO4/5M2TN2+9iAfJKSJIwIOXEhACgtSLvRg8iAhKIR4EBREEiZdAoSKFQEHpRUEKQoMggeyvZJNowtc3u283M5PNmkChkM0Hw8DbmTdvvvdm5r39gIRjQgD3icWEAO4TiwkB3CcWEwK4V9B+LMJaT6G2MIXaHLWFWRjreTiPNro8pg8dG24pDyMz688RbSkD87iMVofHjICudQ9nLwsjPc36ZmBkc7DKVcSpa5WPYGbnezakUzD2inAtHqBBI6CFRmFRnbxCLTRiGsZlpZ+ETgX2xkw4ppYR8yQjMrto1HnsEOg+F2GmeK4gX9iw1NNvHNzhlcf2QLYfkNOCNZd820MnprKwn3moBIWA15stf/DCKmzN282LVVa+CPsPCxmtbzn/2/IWnBcWEoQX7ZxPnlG4Hxw9Cmw4mzxn51qJnvbjCQxvQ/OwHljI6D4cwoiyvVOFs8PO2CwRTSokAqqw14TyKZglm2UyyLAN/7tx+ptlAsG8aZg/dPVk2BMZ7RmWR2OYo/ByzuO3UG+yTIJ7yhG6f6cQ2thn0s4rLJFQv4bpEUfkSA4S+NAT3MESiiMGBWhechTQ4iGsEkxvHnk/wmDgHlZafE/BfmJRDNpBNG1f441lCsjT3veVE7gsen8NEVXiOzn3RnWSRAAdActGm9rbAE+5hY+eEuOyyhJC4GHFIBkUITl/ceuWRTFwT/1zrEaZhGrRX2+OIopFaJKHPdkgJ1CEHHCEyLYTFAJi0QlY1u6A27ynuLZ2jgFrU3j6BOiLR+H9sRGRGhwbmRQNkdFLGJoAt8AXCSlQQjMJBLzSJr0FlmkB/TkbdwLCzYvnJeIdHWsCus+kOHh3b/ufOA/jSoCy+Z8xKXDwCqQP/+krUKPEKRKxr0AOzoCUd6RXoGuVYS0LhTMwryJSXxnjlAd4qFOIeZsfkPf3QcoENeUC3cejMEJGzQSdiPrBPeYI+aqm1mEmSPlDn80iExRz5rJwaixjqASIosbL3WnzF5XYqktGrxb4DEfKEZRaQDeMcvT62S7s7xWtsJFqgS9FNCNrAcpFNE/3aoFFWL8G1AIUVXoRpRAQnBOv9BQVWEwzS/JZslHfDqo/0qFXg58oXDU2W1d8KcmXWYAaecyLQmpR1eBZhJcJ7plUyerVIBVqdc37AioBfAMP0/pu6RH/B4Qlb4aORsTd8Z/+ByQPEwK4TywmBHCfWEwI4D6xSDgBwF8ZVPYLSoF8tQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -160,7 +160,7 @@
                 <uix:TargetAnchorable BrowserURL="https://shopee.com.my/search?keyword=cookies" DesignTimeRectangle="208, 558, 49, 21" ElementType="Text" FriendlyName="'3 sold'" FullSelectorArgument="&lt;webctrl aaname='3 sold' parentid='main' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main' tag='DIV' type='' class='r6HknA uEPGHT' /&gt;" Guid="3d62bd9b-fd0e-4d82-b69f-048ff3267129" InformativeScreenshot="a93486616e15ed042607f27f745d0b60.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='cookies - Prices and Promotions - Sept 2022 | Shopee Malaysia' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
               </uix:NGetText.Target>
               <uix:NGetText.Text>
-                <OutArgument x:TypeArguments="x:String">[outSoldCount]</OutArgument>
+                <OutArgument x:TypeArguments="x:Object">[out_SoldCount]</OutArgument>
               </uix:NGetText.Text>
             </uix:NGetText>
           </Sequence>
